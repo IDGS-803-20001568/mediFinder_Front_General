@@ -1,12 +1,68 @@
-.container {
+.home-container {
+  text-align: center;
+}
+
+.header {
+  background-color: #00bfa5;
+  padding: 1rem;
+}
+
+.header-content {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.sidebar {
-  width: 200px; /* Ajusta según tus necesidades */
+.logo {
+  height: 35px;
 }
 
-.content {
-  flex-grow: 1;
-  padding: 20px; /* Ajusta según tus necesidades */
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.professional-link {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: #00bfa5;
+  font-weight: bold;
+}
+
+.search-section {
+  background-color: #00bfa5;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.search-section h1 {
+  margin: 0;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.specialties-section, .services-section {
+  padding: 1rem 0;
+  background-color: #f9f9f9;
+}
+
+.specialties, .services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.see-more {
+  display: block;
+  margin-top: 0.5rem;
+  color: #00bfa5;
+  font-weight: bold;
 }

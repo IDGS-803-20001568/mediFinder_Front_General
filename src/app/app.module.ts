@@ -15,7 +15,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
-
+import { InputTextModule } from 'primeng/inputtext';
+import { TagModule } from 'primeng/tag';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ButtonModule,
     FormsModule,
     AvatarModule,
+    InputTextModule,
+    TagModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
