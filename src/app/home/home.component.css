@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px; /* Ajusta según tus necesidades */
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px; /* Ajusta según tus necesidades */
+}

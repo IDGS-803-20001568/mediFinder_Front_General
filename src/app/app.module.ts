@@ -9,13 +9,18 @@ import { AvatarModule } from 'primeng/avatar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from 'primeng/api';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    
+    HomeComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,11 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     AvatarModule,
     FormsModule,
-    
+    AppRoutingModule,
+    MegaMenuModule,
+    ButtonModule,
+    FormsModule,
+    AvatarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

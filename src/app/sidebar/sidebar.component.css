@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px; /* Ajusta el ancho según tus necesidades */
+  background-color: #f8f9fa; /* Puedes ajustar el color de fondo */
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px; /* Ajusta el padding según tus necesidades */
+}
