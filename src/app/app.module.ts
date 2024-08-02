@@ -17,6 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { TagModule } from 'primeng/tag';
+import { MenubarModule } from 'primeng/menubar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { TagModule } from 'primeng/tag';
     AvatarModule,
     InputTextModule,
     TagModule,
+    MenubarModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

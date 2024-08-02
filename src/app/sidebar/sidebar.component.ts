@@ -1,63 +1,62 @@
-import { Component } from '@angular/core';
-import { MegaMenuItem } from 'primeng/api';
+import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
+import { MenubarModule } from 'primeng/menubar';
+
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.css'
+  styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent {
-  items: MegaMenuItem[] | undefined;
+export class SidebarComponent implements OnInit {
+    items: MenuItem[] | undefined;
 
     ngOnInit() {
         this.items = [
             {
-                label: 'Company',
-                root: true,
+                label: '',
+                icon: 'pi pi-home'
+            },
+            {
+                label: 'Features',
+                icon: 'pi pi-star'
+            },
+            {
+                label: 'Projects',
+                icon: 'pi pi-search',
                 items: [
-                    [
-                        {
-                            items: [
-                                { label: 'Features', icon: 'pi pi-list', subtext: 'Subtext of item' },
-                                { label: 'Customers', icon: 'pi pi-users', subtext: 'Subtext of item' },
-                                { label: 'Case Studies', icon: 'pi pi-file', subtext: 'Subtext of item' }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            items: [
-                                { label: 'Solutions', icon: 'pi pi-shield', subtext: 'Subtext of item' },
-                                { label: 'Faq', icon: 'pi pi-question', subtext: 'Subtext of item' },
-                                { label: 'Library', icon: 'pi pi-search', subtext: 'Subtext of item' }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            items: [
-                                { label: 'Community', icon: 'pi pi-comments', subtext: 'Subtext of item' },
-                                { label: 'Rewards', icon: 'pi pi-star', subtext: 'Subtext of item' },
-                                { label: 'Investors', icon: 'pi pi-globe', subtext: 'Subtext of item' }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            items: [{ image: 'https://primefaces.org/cdn/primeng/images/uikit/uikit-system.png', label: 'GET STARTED', subtext: 'Build spectacular apps in no time.' }]
-                        }
-                    ]
+                    {
+                        label: 'Components',
+                        icon: 'pi pi-bolt'
+                    },
+                    {
+                        label: 'Blocks',
+                        icon: 'pi pi-server'
+                    },
+                    {
+                        label: 'UI Kit',
+                        icon: 'pi pi-pencil'
+                    },
+                    {
+                        label: 'Templates',
+                        icon: 'pi pi-palette',
+                        items: [
+                            {
+                                label: 'Apollo',
+                                icon: 'pi pi-palette'
+                            },
+                            {
+                                label: 'Ultima',
+                                icon: 'pi pi-palette'
+                            }
+                        ]
+                    }
                 ]
             },
             {
-                label: 'Resources',
-                root: true
-            },
-            {
                 label: 'Contact',
-                root: true
+                icon: 'pi pi-envelope'
             }
-        ];
+        ]
     }
 }
-
