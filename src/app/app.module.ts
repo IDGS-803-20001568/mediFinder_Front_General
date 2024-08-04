@@ -18,11 +18,17 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { TagModule } from 'primeng/tag';
 import { MenubarModule } from 'primeng/menubar';
+import { ChipModule } from 'primeng/chip';
+import { FieldsetModule } from 'primeng/fieldset';
+import { SplitterModule } from 'primeng/splitter'; 
+import { FooterComponent } from './footer/footer.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SidebarComponent
+    SidebarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,10 @@ import { MenubarModule } from 'primeng/menubar';
     AvatarModule,
     InputTextModule,
     TagModule,
-    MenubarModule 
+    MenubarModule,
+    ChipModule,
+    FieldsetModule,
+    SplitterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

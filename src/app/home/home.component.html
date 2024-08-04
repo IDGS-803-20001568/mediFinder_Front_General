@@ -1,59 +1,61 @@
 <div class="home-container">
-  <header class="header">
-    <div class="header-content">
-      <img src="path/to/logo.png" alt="Logo" class="logo">
-      <nav class="nav">
-        <a href="#">¿Cómo protegemos los datos?</a>
-        <a href="#">Pregunta al Experto</a>
-        <a href="#">Registrarse gratis</a>
-        <a href="#">Iniciar sesión</a>
-        <a href="#" class="professional-link">¿Eres profesional de la salud?</a>
-      </nav>
-    </div>
-  </header>
-
   <div class="search-section">
     <h1>Encuentra tu especialista y pide cita</h1>
-    <p>260 000 profesionales están aquí para ayudarte.</p>
-    <div class="search-bar">
-      <p-button label="Visita presencial" styleClass="p-button-outlined p-button-primary"></p-button>
-      <p-button label="En línea" styleClass="p-button-outlined"></p-button>
-      <input type="text" pInputText placeholder="especialidad, enfermedad o nombre">
-      <input type="text" pInputText placeholder="Juarez">
-      <p-button icon="pi pi-search"></p-button>
-    </div>
+    <p>Los profesionales están aquí para ayudarte.</p>
   </div>
 
   <div class="specialties-section">
     <div class="specialties">
-      <p-tag value="Ginecólogo"></p-tag>
-      <p-tag value="Psicólogo"></p-tag>
-      <p-tag value="Dermatólogo"></p-tag>
-      <p-tag value="Oftalmólogo"></p-tag>
-      <p-tag value="Urólogo"></p-tag>
-      <p-tag value="Ortopedista"></p-tag>
-      <p-tag value="Otorrinolaringólogo"></p-tag>
-      <p-tag value="Pediatra"></p-tag>
-      <p-tag value="Psiquiatra"></p-tag>
-      <p-tag value="Cirujano general"></p-tag>
-      <p-tag value="Internista"></p-tag>
-      <p-tag value="Traumatólogo"></p-tag>
+      <div *ngFor="let especialidad of especialidades">
+        <p-chip [label]="especialidad.nombre" class="custom-chip"></p-chip>
+      </div>
     </div>
-    <a href="#" class="see-more">Ver más</a>
   </div>
 
-  <div class="services-section">
-    <div class="services">
-      <p-tag value="Colposcopia"></p-tag>
-      <p-tag value="Electrocardiograma"></p-tag>
-      <p-tag value="Blefaroplastia"></p-tag>
-      <p-tag value="Aplicación de ácido hialurónico"></p-tag>
-      <p-tag value="Vasectomía"></p-tag>
-      <p-tag value="Espirometría"></p-tag>
-      <p-tag value="Mindfulness"></p-tag>
-      <p-tag value="Depilación láser"></p-tag>
-      <p-tag value="Acupuntura"></p-tag>
-    </div>
-    <a href="#" class="see-more">Ver más</a>
-  </div>
+  <div class="beneficios">
+  <p-fieldset legend="Encuentra tu especialista">
+    <p class="m-0">
+      Las opiniones reales de miles de pacientes te ayudarán a tomar siempre la mejor decisión.
+    </p>
+</p-fieldset>
+<p-fieldset legend="Pide cita de forma fácil">
+  <p class="m-0">
+    Elige la hora que prefieras y pide cita sin necesidad de llamar. Es fácil, cómodo y muy rápido.
+  </p>
+</p-fieldset>
+<p-fieldset legend="Recordatorios ">
+  <p class="m-0">
+    Te confirmamos la cita al instante y te enviamos un recordatorio a tu celular antes de la cita.
+  </p>
+</p-fieldset>
+<p-fieldset legend="Sin costos añadidos">
+  <p class="m-0">
+    La reserva de cita es un servicio gratuito de Doctoralia.
+  </p>
+</p-fieldset>
 </div>
+
+
+<p-splitter class="ContentSpliter"
+    [panelSizes]="[46, 54]" 
+    [style]="{ 
+      height: '250px',
+    }" 
+    styleClass="mb-5">
+    <ng-template pTemplate>
+        <div class="texto-estilo">
+          "Cuando necesité encontrar un especialista de manera rápida y eficiente, Medifinder fue mi salvación. La plataforma me permitió buscar por especialidad, ubicación y disponibilidad, lo que facilitó enormemente mi búsqueda. Al encontrar al doctor ideal, agendé la cita de inmediato. Durante la consulta, me sentí muy a gusto gracias a la amabilidad y profesionalismo del médico. Me explicó todo con claridad y resolvió todas mis dudas. Sin duda, Medifinder ha revolucionado la forma en que accedo a servicios de salud."
+        </div>
+    </ng-template>
+    <ng-template pTemplate>
+        <div class="col flex align-items-center justify-content-center">
+          <img src="assets/img/portada.jpg" alt="Descripción de la imagen" class="imagen-personalizada" />
+        </div>
+    </ng-template>
+</p-splitter>
+
+
+</div>
+
+
+

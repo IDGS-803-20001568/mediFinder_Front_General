@@ -14,48 +14,20 @@ export class SidebarComponent implements OnInit {
     ngOnInit() {
         this.items = [
             {
-                label: '',
-                icon: 'pi pi-home'
+                label: '¿Cómo protegemos los datos?',
+                icon: 'pi pi-verified'
             },
             {
-                label: 'Features',
-                icon: 'pi pi-star'
-            },
-            {
-                label: 'Projects',
+                label: 'Busca a tu Experto',
                 icon: 'pi pi-search',
-                items: [
-                    {
-                        label: 'Components',
-                        icon: 'pi pi-bolt'
-                    },
-                    {
-                        label: 'Blocks',
-                        icon: 'pi pi-server'
-                    },
-                    {
-                        label: 'UI Kit',
-                        icon: 'pi pi-pencil'
-                    },
-                    {
-                        label: 'Templates',
-                        icon: 'pi pi-palette',
-                        items: [
-                            {
-                                label: 'Apollo',
-                                icon: 'pi pi-palette'
-                            },
-                            {
-                                label: 'Ultima',
-                                icon: 'pi pi-palette'
-                            }
-                        ]
-                    }
-                ]
             },
             {
-                label: 'Contact',
+                label: 'Conocenos',
                 icon: 'pi pi-envelope'
+            },
+            {
+                label: 'Iniciar sesión',
+                icon: 'pi pi-user'
             }
         ]
     }
