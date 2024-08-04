@@ -15,19 +15,27 @@ export class SidebarComponent implements OnInit {
         this.items = [
             {
                 label: '¿Cómo protegemos los datos?',
-                icon: 'pi pi-verified'
+                icon: 'pi pi-verified',
+                routerLink: '/datos' // Enlace al componente DatosComponent
+
             },
             {
                 label: 'Busca a tu Experto',
                 icon: 'pi pi-search',
+                routerLink: '/busqueda' // Enlace al componente DatosComponent
+
             },
             {
                 label: 'Conocenos',
-                icon: 'pi pi-envelope'
+                icon: 'pi pi-envelope',
+                routerLink: '/conocenos' // Enlace al componente DatosComponent
+
             },
             {
                 label: 'Iniciar sesión',
-                icon: 'pi pi-user'
+                icon: 'pi pi-user',
+                routerLink: '/#' // Enlace al componente DatosComponent
+
             }
         ]
     }

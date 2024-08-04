@@ -22,13 +22,19 @@ import { ChipModule } from 'primeng/chip';
 import { FieldsetModule } from 'primeng/fieldset';
 import { SplitterModule } from 'primeng/splitter'; 
 import { FooterComponent } from './footer/footer.component';
+import { DatosComponent } from './datos/datos.component';
+import { ConocenosComponent } from './conocenos/conocenos.component';
+import { BusquedaDocComponent } from './busqueda-doc/busqueda-doc.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    DatosComponent,
+    ConocenosComponent,
+    BusquedaDocComponent
   ],
   imports: [
     BrowserModule,
