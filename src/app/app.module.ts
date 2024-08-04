@@ -25,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
 import { DatosComponent } from './datos/datos.component';
 import { ConocenosComponent } from './conocenos/conocenos.component';
 import { BusquedaDocComponent } from './busqueda-doc/busqueda-doc.component';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { BusquedaDocComponent } from './busqueda-doc/busqueda-doc.component';
     MenubarModule,
     ChipModule,
     FieldsetModule,
-    SplitterModule
+    SplitterModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

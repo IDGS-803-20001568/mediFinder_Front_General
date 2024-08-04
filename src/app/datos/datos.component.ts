@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './datos.component.css'
 })
 export class DatosComponent {
-
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
