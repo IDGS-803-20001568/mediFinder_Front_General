@@ -1,12 +1,65 @@
-.info-section {
-    margin-bottom: 2rem;
-  }
-  
-  .form-section {
-    margin-top: 2rem;
-  }
-  
-  .p-field {
-    margin-bottom: 1rem;
-  }
-  
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.info-section, .form-section {
+  background: #fff;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.info-section h2, .form-section h2 {
+  color: #20c997;
+  border-bottom: 2px solid #20c997;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-section p, .form-section p {
+  line-height: 1.6;
+}
+
+.p-field {
+  margin-bottom: 1.5rem;
+}
+
+.p-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.p-field input, .p-field textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.p-field input:focus, .p-field textarea:focus {
+  border-color: #20c997;
+  outline: none;
+}
+
+button[pButton] {
+  background-color: #00b39b;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[pButton]:hover {
+  background-color: #00b39b;
+}
