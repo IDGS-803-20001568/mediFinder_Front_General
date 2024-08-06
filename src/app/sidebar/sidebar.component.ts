@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { MenubarModule } from 'primeng/menubar';
-
+import { DialogService } from './../service/dialog.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,6 +9,8 @@ import { MenubarModule } from 'primeng/menubar';
 })
 export class SidebarComponent implements OnInit {
     items: MenuItem[] | undefined;
+
+    constructor(private dialogService: DialogService) {} // Inyecta el servicio aquí
 
     ngOnInit() {
         this.items = [
@@ -34,8 +35,7 @@ export class SidebarComponent implements OnInit {
             {
                 label: 'Iniciar sesión',
                 icon: 'pi pi-user',
-                routerLink: '/#' // Enlace al componente DatosComponent
-
+                command: () => this.dialogService.showDialog() // Usa el servicio para mostrar el diálogo
             }
         ]
     }
