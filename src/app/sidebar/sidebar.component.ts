@@ -1,3 +1,4 @@
+// sidebar.component.ts
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { DialogService } from './../service/dialog.service';

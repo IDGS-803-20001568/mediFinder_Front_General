@@ -1,6 +1,6 @@
-import { DialogService } from './../../service/dialog.service';
 // dialog.component.ts
 import { Component, OnInit } from '@angular/core';
+import { DialogService } from './../../service/dialog.service';
 
 @Component({
   selector: 'app-dialog',
@@ -10,15 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class DialogComponent implements OnInit {
   visible: boolean = false;
 
-  constructor(private DialogService: DialogService) {}
+  constructor(private dialogService: DialogService) {}
 
   ngOnInit() {
-    this.DialogService.visible$.subscribe(visible => {
+    this.dialogService.visible$.subscribe(visible => {
       this.visible = visible;
     });
   }
 
   hideDialog() {
-    this.DialogService.hideDialog();
+    this.dialogService.hideDialog();
   }
 }
