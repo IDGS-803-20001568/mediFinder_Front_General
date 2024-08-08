@@ -1,6 +1,6 @@
 import { BusquedaDocService } from './../service/busqueda-doc.service';
 import { Component, OnInit } from '@angular/core';
-
+import { DialogService } from './../service/dialog.service';
 
 @Component({
   selector: 'app-busqueda-doc',
@@ -12,11 +12,30 @@ export class BusquedaDocComponent implements OnInit {
   filteredDoctors: any[] = [];
   searchTerm: string = '';
 
-  constructor(private BusquedaDocService: BusquedaDocService) { }
+  constructor(
+    private busquedaDocService: BusquedaDocService,
+    private DialogService: DialogService) { }
 
   ngOnInit(): void {
-    this.doctors = this.BusquedaDocService.getDoctors();
-    this.filteredDoctors = this.doctors;
+    this.busquedaDocService.getDoctors().subscribe(data => {
+      this.doctors = data.map((doctor: any) => ({
+        nombre: doctor.nombre,
+        apellido: doctor.apellido,
+        email: doctor.email,
+        telefono: doctor.telefono,
+        calle: doctor.calle,
+        colonia: doctor.colonia,
+        numero: doctor.numero,
+        ciudad: doctor.ciudad,
+        pais: doctor.pais,
+        codigoPostal: doctor.codigoPostal,
+        especialidad: doctor.especialidades.length > 0 ? doctor.especialidades[0].especialidad : '',
+        cedula: doctor.especialidades.length > 0 ? doctor.especialidades[0].numCedula : '',
+        honorarios: doctor.especialidades.length > 0 ? doctor.especialidades[0].honorarios : '',
+        direccion: `${doctor.calle} ${doctor.numero}, ${doctor.colonia}, ${doctor.ciudad}, ${doctor.pais}, ${doctor.codigoPostal}`
+      }));
+      this.filteredDoctors = this.doctors;
+    });
   }
 
   filterDoctors() {
@@ -27,5 +46,9 @@ export class BusquedaDocComponent implements OnInit {
     } else {
       this.filteredDoctors = this.doctors;
     }
+  }
+  requestAppointment(doctor: any) {
+    // Usa el servicio para mostrar el diálogo
+    this.DialogService.showDialog();
   }
 }
