@@ -29,6 +29,7 @@ import { CardModule } from 'primeng/card';
 import { DialogModule } from 'primeng/dialog';
 import { DialogComponent } from './dialog/dialog/dialog.component';
 import { DialogService } from './service/dialog.service';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { DialogService } from './service/dialog.service';
     FieldsetModule,
     SplitterModule,
     CardModule,
-    DialogModule
+    DialogModule,
+    ToastModule
   ],
   providers: [DialogService],
   bootstrap: [AppComponent]

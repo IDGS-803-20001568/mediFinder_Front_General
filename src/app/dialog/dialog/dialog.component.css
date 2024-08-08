@@ -5,44 +5,43 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   }
-  
+
   .p-dialog-header {
     background: #4CAF50; /* Color de fondo del encabezado */
     color: #fff;
     border-bottom: none;
     border-radius: 8px 8px 0 0;
   }
-  
+
   .p-dialog-header .p-dialog-title {
     font-size: 20px;
     font-weight: bold;
     color: #fff;
   }
-  
+
   .p-dialog-footer {
     border-top: none;
   }
-  
+
   /* Estilos para el contenido del diálogo */
   .login-options {
     text-align: center;
     padding: 20px;
   }
-  
+
   .intro-text {
     font-size: 18px;
     color: #333;
     margin-bottom: 20px;
   }
-  
+
   /* Contenedor de los botones */
   .button-group {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 10%;
+    margin-top: 11%;
   }
-  
+
   /* Estilo para los botones */
   .login-button {
     width: 100%;
@@ -51,23 +50,22 @@
     border-radius: 25px; /* Borde redondeado */
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
-  
+
   /* Estilos específicos para cada botón */
   .doctor-btn {
     border: none;
     color: #fff;
   }
-  
+
   .doctor-btn:hover {
     transform: scale(1.05); /* Escalar ligeramente el botón */
   }
-  
+
   .paciente-btn {
     border: none;
     color: #fff;
   }
-  
+
   .paciente-btn:hover {
     transform: scale(1.05); /* Escalar ligeramente el botón */
   }
-  

@@ -1,15 +1,42 @@
 <!-- Sección de información de la empresa -->
-<div class="info-section">
-  <h2>Sobre Medifinder</h2>
-  <p>
-    Medifinder es una empresa dedicada a mejorar la gestión de citas médicas y la administración de consultas.
-    Nuestra misión es ofrecer soluciones innovadoras para facilitar la interacción entre médicos y pacientes.
-  </p>
-</div>
+<div class="container">
+  <div class="info-section">
+    <h2>Sobre Medifinder</h2>
+    <p>
+      Medifinder es una empresa líder en el campo de la gestión de citas médicas y administración de consultas.
+      Nos dedicamos a ofrecer soluciones innovadoras para mejorar la experiencia tanto de médicos como de pacientes.
+    </p>
+    <p>
+      Nuestra misión es facilitar la interacción entre profesionales de la salud y sus pacientes,
+      brindando herramientas tecnológicas que permiten optimizar la administración del tiempo y los recursos.
+    </p>
+    <p>
+      En Medifinder, creemos en la importancia de la accesibilidad y la eficiencia en el sector salud,
+      y trabajamos constantemente para desarrollar productos que reflejen estos valores.
+    </p>
+    <ul>
+      <li><strong>Años de experiencia:</strong> Más de 10 años en el mercado</li>
+      <li><strong>Clientes satisfechos:</strong> Más de 1,000 médicos y clínicas</li>
+      <li><strong>Innovación:</strong> Plataformas tecnológicas de vanguardia</li>
+    </ul>
+  </div>
 
-<!-- Formulario de comentarios -->
+  <!-- Sección de servicios -->
+  <div class="services-section">
+    <h2>Nuestros Servicios</h2>
+    <ul>
+      <li><strong>Gestión de Citas Médicas:</strong> Planifica y organiza tus citas de manera eficiente.</li>
+      <li><strong>Administración de Consultas:</strong> Facilita la gestión diaria de tu clínica o consultorio.</li>
+      <li><strong>Plataforma Multicanal:</strong> Accede desde dispositivos móviles y web.</li>
+      <li><strong>Soporte Técnico:</strong> Atención al cliente 24/7 para resolver tus dudas.</li>
+    </ul>
+  </div>
+
+  <!-- Formulario de comentarios -->
+ <!-- Formulario de comentarios -->
 <div class="form-section">
   <h2>Deja tus comentarios</h2>
+  <p>Nos encantaría saber tu opinión. Por favor, completa el siguiente formulario para enviarnos tus comentarios.</p>
   <form (ngSubmit)="onSubmit()">
     <div class="p-fluid">
       <div class="p-field">
@@ -24,7 +51,12 @@
         <label for="comments">Comentarios</label>
         <textarea id="comments" pInputTextarea [(ngModel)]="comments" name="comments" rows="5" required></textarea>
       </div>
-      <button pButton type="submit" label="Enviar"></button>
+      <button pButton type="submit" label="Enviar" [disabled]="!name || !email || !comments"></button>
     </div>
   </form>
+</div>
+
+
+  <!-- Componente p-toast para mostrar los mensajes toast -->
+  <p-toast></p-toast>
 </div>
