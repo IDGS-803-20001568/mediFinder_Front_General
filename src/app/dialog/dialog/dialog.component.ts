@@ -28,7 +28,7 @@ export class DialogComponent implements OnInit {
     if (role === 'doctor') {
       this.router.navigate(['/login-doctor']); // Cambia a la URL adecuada
     } else if (role === 'paciente') {
-      this.router.navigate(['/login-paciente']); // Cambia a la URL adecuada
+      this.router.navigate(['http://localhost:4001/']); // Cambia a la URL adecuada
     }
     this.hideDialog(); // Cierra el diálogo después de redirigir
   }
